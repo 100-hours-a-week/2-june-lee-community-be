@@ -1,47 +1,206 @@
 [
-    {
-      "id": 1,
-      "title": "이 글은 일글이고 다음글은 이글",
-      "content": "첫 글 본문입니다.",
-      "likes": 1,
-      "comments": 1,
-      "views": 1,
-      "date": "2024-12-05",
-      "writer": "june",
-      "image": "./public/image/default.jpg"
-    },
-    {
-      "id": 2,
-      "title": "이글은 이글입니다",
-      "content": "두 번째 글 본문입니다.",
-      "likes": 2,
-      "comments": 2,
-      "views": 2,
-      "date": "2024-12-05",
-      "writer": "june",
-      "image": "./public/image/default.jpg"
-    },
-    {
-      "id": 3,
-      "title": "삼글삼글",
-      "content": "세 번째 글 본문입니다.",
-      "likes": 3,
-      "comments": 3,
-      "views": 3,
-      "date": "2024-12-05",
-      "writer": "june",
-      "image": "./public/image/default.jpg"
-    },
-    {
-      "id": 4,
-      "title": "싸그리",
-      "content": "네 번째 글 본문입니다.",
-      "likes": 4,
-      "comments": 4,
-      "views": 4,
-      "date": "2024-12-05",
+  {
+    "id": 1,
+    "title": "이 글은 일글이고 다음글은 이글",
+    "content": "첫 글 본문입니다.",
+    "likes": 1,
+    "views": 1,
+    "date": "2024-12-05",
     "writer": "june",
-    "image": "./public/image/default.jpg"
+    "image": "/public/images/default.jpg",
+    "comment": [
+      {
+        "cid": 1,
+        "ccontent": "첫 번째 댓글입니다.",
+        "cwriter": "user1",
+        "ccdate": "2024-12-12"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "이 글은 eagle입니다",
+    "content": "두 번째 글 본문입니다.",
+    "likes": 6,
+    "views": 73,
+    "date": "2024-12-05",
+    "writer": "june",
+    "image": "/public/images/default.jpg",
+    "comment": [
+      {
+        "cid": 1,
+        "ccontent": "첫 번째 댓글입니다.",
+        "cwriter": "user1",
+        "cdate": "2024-12-12"
+      },
+      {
+        "cid": 2,
+        "ccontent": "두 번째 댓글입니다.",
+        "cwriter": "user2",
+        "cdate": "2024-12-12"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "싱글삼글",
+    "content": "세 번째 글 본문입니다.",
+    "likes": 3,
+    "views": 5,
+    "date": "2024-12-05",
+    "writer": "june",
+    "image": "/public/images/default.jpg",
+    "comment": [
+      {
+        "cid": 1,
+        "ccontent": "첫 번째 댓글입니다.",
+        "cwriter": "user1",
+        "cdate": "2024-12-12"
+      },
+      {
+        "cid": 2,
+        "ccontent": "두 번째 댓글입니다.",
+        "cwriter": "user2",
+        "cdate": "2024-12-12"
+      },
+      {
+        "cid": 3,
+        "ccontent": "세 번째 댓글입니다.",
+        "cwriter": "user3",
+        "cdate": "2024-12-12"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "title": "4번째 글입니다아",
+    "content": "네 번째 글 본문입니다.",
+    "likes": 7,
+    "views": 4038,
+    "date": "2024-12-05",
+    "writer": "june",
+    "image": "/public/images/default.jpg",
+    "comment": []
+  },
+  {
+    "id": 5,
+    "title": "이러면 게시글이 추가될까 두근 두근 두근 대",
+    "content": "어? 왜 갑자기 수정이 되는거지?",
+    "likes": 0,
+    "views": 15,
+    "writer": "june",
+    "image": "/uploads/1738823861339.png",
+    "comment": [],
+    "date": "2025-01-21T07:47:29.755Z"
+  },
+  {
+    "id": 6,
+    "title": "게시글을 올려볼까요 뚜비 두밤",
+    "content": "뚬빠둠바두비두밤",
+    "likes": 0,
+    "views": 1,
+    "writer": "june",
+    "image": "",
+    "comment": [],
+    "date": "2025-01-28T08:09:32.916Z"
+  },
+  {
+    "id": 7,
+    "title": "아아 서버테스트 원투쓰리",
+    "content": "서버 상태가 멀쩡한가요",
+    "likes": 0,
+    "views": 2,
+    "writer": "june",
+    "image": "",
+    "comment": [],
+    "date": "2025-01-31T09:57:52.276Z"
+  },
+  {
+    "id": 8,
+    "title": "why are you kidding me",
+    "content": "2",
+    "likes": 1,
+    "views": 3,
+    "writer": "june",
+    "comment": [],
+    "date": "2025-02-04T04:31:38.445Z",
+    "image": "/public/images/cat.jpg"
+  },
+  {
+    "id": 9,
+    "title": "nmn",
+    "content": "mnm",
+    "likes": 4,
+    "views": 34,
+    "writer": "june",
+    "comment": [],
+    "date": "2025-02-04T04:51:14.011Z",
+    "image": "/uploads/1738644674008.png"
+  },
+  {
+    "id": 10,
+    "title": "zzz",
+    "content": "zz",
+    "likes": 0,
+    "views": 4,
+    "writer": "june",
+    "comment": [],
+    "date": "2025-02-04T05:41:35.796Z",
+    "image": "/public/images/cat.jpg"
+  },
+  {
+    "id": 11,
+    "title": "사진업로드테스트",
+    "content": "테스트굿",
+    "likes": 0,
+    "views": 2,
+    "writer": "june",
+    "comment": [],
+    "date": "2025-02-04T05:52:02.016Z",
+    "image": "/uploads/1738648322012.webp"
+  },
+  {
+    "id": 12,
+    "title": "아오 js 자동 문자열변환 ",
+    "content": "역시 C++이 더낫네요",
+    "likes": 0,
+    "views": 18,
+    "writer": "june",
+    "comment": [],
+    "date": "2025-02-04T05:55:43.003Z",
+    "image": "/public/images/cat.jpg"
+  },
+  {
+    "id": 13,
+    "title": "테스트",
+    "content": "날짜",
+    "writer": "june",
+    "likes": 0,
+    "views": 0,
+    "comment": [],
+    "date": "2025-02-06T13:55:51.035Z",
+    "image": null
+  },
+  {
+    "id": 14,
+    "title": "1",
+    "content": "2",
+    "writer": "june",
+    "likes": 0,
+    "views": 0,
+    "comment": [],
+    "date": "2025-02-06 22:56:14",
+    "image": null
+  },
+  {
+    "id": 15,
+    "title": "ㅇㅇㅇㅇㅇ",
+    "content": "ㅇㅇㅇㅇㅇㅇ",
+    "writer": "june",
+    "likes": 0,
+    "views": 0,
+    "comment": [],
+    "date": "2025-02-06 23:09:05",
+    "image": null
   }
 ]
-  

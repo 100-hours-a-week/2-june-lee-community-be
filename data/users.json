@@ -1,16 +1,16 @@
 [
     {
-      "id": 1,
-      "name": "june",
-      "email": "june@example.com",
-      "password": "password123",
-      "profileImage": "/images/default-profile.jpg"
+      "userId": 1,
+      "nickname": "june",
+      "email": "june@june.june",
+      "password": "Password1!",
+      "profileImage": "/public/images/cat.jpg"
     },
     {
-      "id": 2,
-      "name": "jane",
+      "userId": 2,
+      "nickname": "jane",
       "email": "jane@example.com",
-      "password": "password456",
+      "password": "Password1!",
       "profileImage": "/images/default-profile.jpg"
     }
   ]
