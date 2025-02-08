@@ -87,7 +87,7 @@
     "title": "이러면 게시글이 추가될까 두근 두근 두근 대",
     "content": "어? 왜 갑자기 수정이 되는거지?",
     "likes": 0,
-    "views": 15,
+    "views": 16,
     "writer": "june",
     "image": "/uploads/1738823861339.png",
     "comment": [],
@@ -142,11 +142,12 @@
     "title": "zzz",
     "content": "zz",
     "likes": 0,
-    "views": 4,
+    "views": 5,
     "writer": "june",
     "comment": [],
     "date": "2025-02-04T05:41:35.796Z",
-    "image": "/public/images/cat.jpg"
+    "image": "/public/images/cat.jpg",
+    "deleteFlag": true
   },
   {
     "id": 11,
@@ -176,10 +177,11 @@
     "content": "날짜",
     "writer": "june",
     "likes": 0,
-    "views": 0,
+    "views": 1,
     "comment": [],
     "date": "2025-02-06T13:55:51.035Z",
-    "image": null
+    "image": null,
+    "deleteFlag": true
   },
   {
     "id": 14,
@@ -187,8 +189,33 @@
     "content": "2",
     "writer": "june",
     "likes": 0,
-    "views": 0,
-    "comment": [],
+    "views": 32,
+    "comment": [
+      {
+        "cid": 1,
+        "ccontent": "흠........",
+        "cwriter": "june",
+        "cdate": "2025-02-07"
+      },
+      {
+        "cid": 2,
+        "ccontent": "댓글 체크를 해볼까요?<br>안녕하세요<br> 오늘은 댓글을 수정해봤어요",
+        "cwriter": "june",
+        "cdate": "2025-02-08"
+      },
+      {
+        "cid": 5,
+        "ccontent": "댓글 남기는 시간을 체크해볼거에요",
+        "cwriter": "june",
+        "cdate": "2025-02-09 00:07:35"
+      },
+      {
+        "cid": 6,
+        "ccontent": "댓글체크",
+        "cwriter": "june",
+        "cdate": "2025-02-09 00:10:06"
+      }
+    ],
     "date": "2025-02-06 22:56:14",
     "image": null
   },
@@ -198,9 +225,28 @@
     "content": "ㅇㅇㅇㅇㅇㅇ",
     "writer": "june",
     "likes": 0,
-    "views": 0,
+    "views": 9,
     "comment": [],
     "date": "2025-02-06 23:09:05",
+    "image": null,
+    "deleteFlag": true
+  },
+  {
+    "id": 16,
+    "title": "이제 거의 완성된것같은데",
+    "content": "제출을해볼까..",
+    "writer": "june",
+    "likes": 0,
+    "views": 5,
+    "comment": [
+      {
+        "cid": 1,
+        "ccontent": "좋아\n싫어하는 놈을 제거하면 제출가능하다",
+        "cwriter": "june",
+        "cdate": "2025-02-08"
+      }
+    ],
+    "date": "2025-02-09 00:36:21",
     "image": null
   }
 ]

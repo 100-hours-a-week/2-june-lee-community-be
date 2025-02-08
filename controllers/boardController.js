@@ -15,28 +15,24 @@ function getFormattedDate() {
 // 모든 게시글 조회
 const getAllBoards = (req, res) => {
     const boards = getBoards();
-    res.json(boards);
+    const filteredBoards = boards.filter((b) => !b.deleteFlag);
+    res.json(filteredBoards);
 };
 
 // 특정 게시글 조회
 const getBoardById = (req, res) => {
     const boards = getBoards();
-    const board = boards.find((b) => b.id === Number(req.params.id));
+    const board = boards.find((b) => b.id === Number(req.params.id) && !b.deleteFlag);
     if (!board) {
         return res.status(404).json({ error: '게시글을 찾을 수 없습니다.' });
     }
+    board.comment = board.comment.filter((c) => !c.deleteFlag);
     res.json(board);
 };
 
 // 게시글 생성
 const createBoard = (req, res) => {
     const boards = getBoards();
-    // const newBoard = {
-    //     id: boards.length + 1,
-    //     ...req.body,
-    //     date: new Date().toISOString(),
-    //     image: req.file ?`/uploads/${req.file.filename}` : `/public/cat.jpg` 
-    // };
     const newBoard = {
         id: boards.length + 1,
         title: req.body.title,
@@ -93,5 +89,111 @@ const modifyBoardById = (req, res) => {
         res.status(500).json({ message: '게시글 수정 중 에러가 발생했습니다.' });
     }
 };
+const deleteBoard = (req, res) => {
+    try {
+        const boards = getBoards();
+        const boardIndex = boards.findIndex((b) => b.id === Number(req.params.id));
 
-module.exports = { getAllBoards, getBoardById, createBoard, modifyBoardById };
+        if (boardIndex === -1) {
+            return res.status(404).json({ message: '게시글을 찾을 수 없습니다.' });
+        }
+
+        // 소프트 딜리트
+        boards[boardIndex].deleteFlag = true;
+
+        saveBoards(boards);
+        res.status(200).json({ message: '게시글이 삭제되었습니다.', board: boards[boardIndex] });
+    } catch (error) {
+        console.error('게시글 삭제 중 오류 발생:', error);
+        res.status(500).json({ message: '게시글 삭제 중 오류가 발생했습니다.' });
+    }
+};
+// 특정 게시글에 댓글 추가
+const addComment = (req, res) => {
+    try {
+        const boards = getBoards();
+        const boardIndex = boards.findIndex((b) => b.id === Number(req.params.id));
+
+        if (boardIndex === -1) {
+            return res.status(404).json({ message: '게시글을 찾을 수 없습니다.' });
+        }
+
+        const board = boards[boardIndex];
+
+        // 새로운 댓글 ID 생성 (기존 댓글 중 가장 높은 `cid` 찾고 +1)
+        const newCommentId = board.comment.length > 0 
+            ? Math.max(...board.comment.map(c => c.cid)) + 1 
+            : 1;
+
+        // 새 댓글 객체 생성
+        const newComment = {
+            cid: newCommentId,
+            ccontent: req.body.ccontent, // 댓글 내용
+            cwriter: req.body.cwriter,   // 작성자
+            cdate: getFormattedDate() // YYYY-MM-DD 형식
+        };
+
+        // 댓글 리스트에 추가
+        board.comment.push(newComment);
+        saveBoards(boards);
+
+        res.status(201).json({ message: '댓글이 추가되었습니다.', comment: newComment });
+    } catch (error) {
+        console.error('댓글 추가 중 오류 발생:', error);
+        res.status(500).json({ message: '댓글 추가 중 오류가 발생했습니다.' });
+    }
+};
+const modifyComment = (req, res) => {
+    try {
+        const boards = getBoards();
+        const boardIndex = boards.findIndex((b) => b.id === Number(req.params.id));
+
+        if (boardIndex === -1) {
+            return res.status(404).json({ message: '게시글을 찾을 수 없습니다.' });
+        }
+
+        const board = boards[boardIndex];
+        const commentIndex = board.comment.findIndex((c) => c.cid === Number(req.params.cid));
+
+        if (commentIndex === -1) {
+            return res.status(404).json({ message: '댓글을 찾을 수 없습니다.' });
+        }
+
+        // 댓글 수정
+        board.comment[commentIndex].ccontent = req.body.ccontent;
+        board.comment[commentIndex].cdate = new Date().toISOString().split('T')[0]; // 수정 날짜 반영
+
+        saveBoards(boards);
+        res.status(200).json({ message: '댓글이 수정되었습니다.', comment: board.comment[commentIndex] });
+    } catch (error) {
+        console.error('댓글 수정 중 오류 발생:', error);
+        res.status(500).json({ message: '댓글 수정 중 오류가 발생했습니다.' });
+    }
+};
+const deleteComment = (req, res) => {
+    try {
+        const boards = getBoards();
+        const boardIndex = boards.findIndex((b) => b.id === Number(req.params.id));
+
+        if (boardIndex === -1) {
+            return res.status(404).json({ message: '게시글을 찾을 수 없습니다.' });
+        }
+
+        const board = boards[boardIndex];
+        const commentIndex = board.comment.findIndex((c) => c.cid === Number(req.params.cid));
+
+        if (commentIndex === -1) {
+            return res.status(404).json({ message: '댓글을 찾을 수 없습니다.' });
+        }
+
+        // 소프트 딜리트
+        board.comment[commentIndex].deleteFlag = true;
+
+        saveBoards(boards);
+        res.status(200).json({ message: '댓글이 삭제되었습니다.', comment: board.comment[commentIndex] });
+    } catch (error) {
+        console.error('댓글 삭제 중 오류 발생:', error);
+        res.status(500).json({ message: '댓글 삭제 중 오류가 발생했습니다.' });
+    }
+};
+module.exports = { getAllBoards, getBoardById, createBoard, modifyBoardById, deleteBoard, addComment, modifyComment, deleteComment};
