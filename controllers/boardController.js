@@ -1,6 +1,6 @@
 const { getBoards, saveBoards } = require('../models/boardModel');
 
-function getFormattedDate() {
+const getFormattedDate = () =>{
     const now = new Date();
 
     const year = now.getFullYear();
@@ -11,7 +11,7 @@ function getFormattedDate() {
     const seconds = String(now.getSeconds()).padStart(2, "0");
 
     return `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
-}
+};
 // 모든 게시글 조회
 const getAllBoards = (req, res) => {
     const boards = getBoards();

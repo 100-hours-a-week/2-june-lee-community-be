@@ -17,7 +17,7 @@ const getBoards = () => {
                         board.comment = []; // 변환 실패 시 빈 배열
                     }
                 } catch (error) {
-                    console.error(`🚨 댓글 변환 오류 (게시글 ID: ${board.id}):`, error);
+                    console.error(`댓글 변환 오류 :`, error);
                     board.comment = []; // 변환 실패 시 빈 배열
                 }
             }
@@ -25,7 +25,7 @@ const getBoards = () => {
 
         return boards;
     } catch (error) {
-        console.error('🚨 게시글 로드 중 에러:', error);
+        console.error('게시글 로드 중 에러:', error);
         return []; // 파일 읽기 실패 시 빈 배열 반환
     }
 };

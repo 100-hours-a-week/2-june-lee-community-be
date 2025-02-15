@@ -4,15 +4,17 @@
     "title": "이 글은 일글이고 다음글은 이글",
     "content": "첫 글 본문입니다.",
     "likes": 1,
-    "views": 1,
+    "views": 9,
     "date": "2024-12-05",
     "writer": "june",
+    "writerId": 2,
     "image": "/public/images/default.jpg",
     "comment": [
       {
         "cid": 1,
         "ccontent": "첫 번째 댓글입니다.",
         "cwriter": "user1",
+        "cwriterId": 2,
         "ccdate": "2024-12-12"
       }
     ]
@@ -25,12 +27,14 @@
     "views": 73,
     "date": "2024-12-05",
     "writer": "june",
+    "writerId": 2,
     "image": "/public/images/default.jpg",
     "comment": [
       {
         "cid": 1,
         "ccontent": "첫 번째 댓글입니다.",
         "cwriter": "user1",
+        "cwriterId": 2,
         "cdate": "2024-12-12"
       },
       {
@@ -49,12 +53,14 @@
     "views": 5,
     "date": "2024-12-05",
     "writer": "june",
+    "writerId": 2,
     "image": "/public/images/default.jpg",
     "comment": [
       {
         "cid": 1,
         "ccontent": "첫 번째 댓글입니다.",
         "cwriter": "user1",
+        "cwriterId": 2,
         "cdate": "2024-12-12"
       },
       {
@@ -76,9 +82,10 @@
     "title": "4번째 글입니다아",
     "content": "네 번째 글 본문입니다.",
     "likes": 7,
-    "views": 4038,
+    "views": 4039,
     "date": "2024-12-05",
     "writer": "june",
+    "writerId": 2,
     "image": "/public/images/default.jpg",
     "comment": []
   },
@@ -89,6 +96,7 @@
     "likes": 0,
     "views": 16,
     "writer": "june",
+    "writerId": 2,
     "image": "/uploads/1738823861339.png",
     "comment": [],
     "date": "2025-01-21T07:47:29.755Z"
@@ -98,8 +106,9 @@
     "title": "게시글을 올려볼까요 뚜비 두밤",
     "content": "뚬빠둠바두비두밤",
     "likes": 0,
-    "views": 1,
+    "views": 3,
     "writer": "june",
+    "writerId": 2,
     "image": "",
     "comment": [],
     "date": "2025-01-28T08:09:32.916Z"
@@ -111,6 +120,7 @@
     "likes": 0,
     "views": 2,
     "writer": "june",
+    "writerId": 2,
     "image": "",
     "comment": [],
     "date": "2025-01-31T09:57:52.276Z"
@@ -122,6 +132,7 @@
     "likes": 1,
     "views": 3,
     "writer": "june",
+    "writerId": 2,
     "comment": [],
     "date": "2025-02-04T04:31:38.445Z",
     "image": "/public/images/cat.jpg"
@@ -131,8 +142,9 @@
     "title": "nmn",
     "content": "mnm",
     "likes": 4,
-    "views": 34,
+    "views": 36,
     "writer": "june",
+    "writerId": 2,
     "comment": [],
     "date": "2025-02-04T04:51:14.011Z",
     "image": "/uploads/1738644674008.png"
@@ -144,6 +156,7 @@
     "likes": 0,
     "views": 5,
     "writer": "june",
+    "writerId": 2,
     "comment": [],
     "date": "2025-02-04T05:41:35.796Z",
     "image": "/public/images/cat.jpg",
@@ -154,8 +167,9 @@
     "title": "사진업로드테스트",
     "content": "테스트굿",
     "likes": 0,
-    "views": 2,
+    "views": 3,
     "writer": "june",
+    "writerId": 2,
     "comment": [],
     "date": "2025-02-04T05:52:02.016Z",
     "image": "/uploads/1738648322012.webp"
@@ -165,8 +179,9 @@
     "title": "아오 js 자동 문자열변환 ",
     "content": "역시 C++이 더낫네요",
     "likes": 0,
-    "views": 18,
+    "views": 29,
     "writer": "june",
+    "writerId": 2,
     "comment": [],
     "date": "2025-02-04T05:55:43.003Z",
     "image": "/public/images/cat.jpg"
@@ -176,6 +191,7 @@
     "title": "테스트",
     "content": "날짜",
     "writer": "june",
+    "writerId": 2,
     "likes": 0,
     "views": 1,
     "comment": [],
@@ -188,6 +204,7 @@
     "title": "1",
     "content": "2",
     "writer": "june",
+    "writerId": 2,
     "likes": 0,
     "views": 32,
     "comment": [
@@ -224,6 +241,7 @@
     "title": "ㅇㅇㅇㅇㅇ",
     "content": "ㅇㅇㅇㅇㅇㅇ",
     "writer": "june",
+    "writerId": 2,
     "likes": 0,
     "views": 9,
     "comment": [],
@@ -236,8 +254,9 @@
     "title": "이제 거의 완성된것같은데",
     "content": "제출을해볼까..",
     "writer": "june",
+    "writerId": 2,
     "likes": 0,
-    "views": 5,
+    "views": 9,
     "comment": [
       {
         "cid": 1,
@@ -248,5 +267,59 @@
     ],
     "date": "2025-02-09 00:36:21",
     "image": null
+  },
+  {
+    "id": 17,
+    "title": "w",
+    "content": "w",
+    "writer": "june",
+    "writerId": 2,
+    "likes": 0,
+    "views": 10,
+    "comment": [],
+    "date": "2025-02-11 03:28:02",
+    "image": null
+  },
+  {
+    "id": 18,
+    "title": "asd",
+    "content": "sdf",
+    "writer": "june",
+    "writerId": 2,
+    "likes": 0,
+    "views": 41,
+    "comment": [],
+    "date": "2025-02-11 18:05:45",
+    "image": "/uploads/1739264745807.jpg"
+  },
+  {
+    "id": 19,
+    "title": "gma",
+    "content": "gma....",
+    "writer": "undefined",
+    "likes": 0,
+    "views": 2,
+    "comment": [],
+    "date": "2025-02-13 18:49:54",
+    "image": null,
+    "deleteFlag": true
+  },
+  {
+    "id": 20,
+    "title": "안녕하세요",
+    "content": "준입니다",
+    "writer": "undefined",
+    "likes": 1,
+    "views": 4,
+    "comment": [
+      {
+        "cid": 1,
+        "ccontent": "댓글을 남겨봤습니다\n",
+        "cwriter": "june",
+        "cdate": "2025-02-14 02:50:36"
+      }
+    ],
+    "date": "2025-02-14 02:49:29",
+    "image": "/uploads/1739469021839.jpg"
   }
 ]

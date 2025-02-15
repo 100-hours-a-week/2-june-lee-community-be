@@ -1,17 +1,30 @@
 [
-    {
-      "userId": 1,
-      "nickname": "june",
-      "email": "june@june.june",
-      "password": "Password1!",
-      "profileImage": "/public/images/cat.jpg"
-    },
-    {
-      "userId": 2,
-      "nickname": "jane",
-      "email": "jane@example.com",
-      "password": "Password1!",
-      "profileImage": "/images/default-profile.jpg"
-    }
-  ]
-  
+  {
+    "userId": 1,
+    "nickname": "june",
+    "email": "june@june.june",
+    "password": "Password1!",
+    "profileImage": "/public/images/cat.jpg"
+  },
+  {
+    "userId": 2,
+    "nickname": "jane",
+    "email": "jane@example.com",
+    "password": "Password1!",
+    "profileImage": "/public/images/default.jpg"
+  },
+  {
+    "userId": 3,
+    "nickname": "ㅎ포",
+    "email": "a@a.a",
+    "password": "Aaaaaa1!",
+    "profileImage": "/uploads/1739266662398.jpg"
+  },
+  {
+    "userId": 4,
+    "nickname": "pro",
+    "email": "pro@pro.pro",
+    "password": "Propro1!",
+    "profileImage": "/uploads/1739413547373.png"
+  }
+]
